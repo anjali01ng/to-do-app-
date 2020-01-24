@@ -1,0 +1,21 @@
+
+    <h2 align="center"> TO-DO-APP</h2>
+    <mat-card>
+        <mat-form-field>
+      <input matInput  type="text"  placeholder="Enter a task" [(ngModel)]="task">
+    </mat-form-field>
+
+    <button 
+    mat-raised-button
+    color="accent"
+    (click)="addTask()">add</button>
+    <p *ngFor="let element of tasks;let i=index" >
+    {{ element }}
+    <button type="button" mat-raised-button
+    color="accent" (click)="tasks.splice(i,1)">
+       Trash 
+    </button>
+</mat-card>
+ 
+  
+
